@@ -1,0 +1,20 @@
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+*/generate_allure_report.sh
+*/generate_allure_report.bat
+/*/allure-results/
+/*/extent-reports/
+/.idea/
+/GUI_Web_Basic/src/main/resources/properties/*.properties
+/GUI_Web/src/main/resources/properties/*.properties
+/GUI_Web_Basic/execution-summary/*.html
+/GUI_Web/execution-summary/*.html
