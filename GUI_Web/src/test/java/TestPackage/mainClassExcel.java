@@ -5,6 +5,7 @@ package TestPackage;
 import java.io.IOException;
 import java.util.ArrayList;
 import com.shaft.driver.SHAFT;
+import com.shaft.tools.io.JSONFileManager;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
@@ -18,15 +19,17 @@ import pages.*;
 
 
 //Main Class initialization as public class
-public class MainclassExcel {
+public class mainClassExcel {
 
 	private SHAFT.GUI.WebDriver driver;
-	private SHAFT.TestData.EXCEL testData;
+	private JSONFileManager testData;
+	private String className= this.getClass().getName().replace(this.getClass().getPackageName()+".","");
 	private dataDriven d = new dataDriven();
+
 
 	@BeforeClass(description = "Setup Test Data.")
 	public void beforeClass(){
-		testData = new SHAFT.TestData.EXCEL("testDataFiles/excel.xlsx");
+		testData = new JSONFileManager( className + ".xlsx");
 	}
 
 	@BeforeMethod(description = "Setup Browser instance.")

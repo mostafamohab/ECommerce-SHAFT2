@@ -1,0 +1,26 @@
+{
+  "signUp": {
+    "Email": "Mostafa_mohab1999@hotmail.com"
+  },
+  "createAccount": {
+    "Email": "Mostafa_mohab1999@hotmail.com",
+    "Password": "1234567",
+    "FirstName":"Mostafa",
+    "LastName": "Mohab",
+    "Day": "1",
+    "Month": "May",
+    "Year": "2020",
+    "Company": "Codelab",
+    "Address": "Cairo,11111,egypt",
+    "City": "Cairo",
+    "State": "California",
+    "PostCode": "11757",
+    "Other": "no other info",
+    "HomePhone": "0226330123",
+    "MobilePhone": "01263301234"
+  },
+  "signIn": {
+    "Email": "Mostafa_mohab1999@hotmail.com",
+    "Password": "1234567"
+  }
+}
