@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.Home;
+import pages.HomePage;
 
 public class TestClass {
     private  SHAFT.GUI.WebDriver driver;
@@ -21,7 +21,7 @@ public class TestClass {
     @Description("Given I am on the Home page,\nThen the browser title should be 'Google'.")
     @Test(description = "Check that Home Page Title is correct.")
     public void checkHomePageTitleIsCorrect() {
-        new Home(driver).verifyBrowserTitleIsCorrect();
+        new HomePage(driver).verifyBrowserTitleIsCorrect();
     }
 
     @Epic("SHAFT Web GUI Template")
@@ -29,7 +29,7 @@ public class TestClass {
     @Description("Given I am on the Home page,\nWhen I search for a valid query,\nThen the result stats will show some data (will not be empty).")
     @Test(description = "Check that Result Stats is not empty after searching for a query.")
     public void checkResultStatsIsNotEmptyAfterSearchingForAQuery() {
-        new Home(driver).searchForQuery(testData.getTestData("searchQuery"))
+        new HomePage(driver).searchForQuery(testData.getTestData("searchQuery"))
                 .assertResultStatsIsNotEmpty();
     }
 
@@ -41,7 +41,7 @@ public class TestClass {
     @BeforeMethod(description = "Setup Browser instance.")
     public void beforeMethod() {
         driver = new SHAFT.GUI.WebDriver();
-        new Home(driver).navigate();
+        new HomePage(driver).navigate();
     }
 
     @AfterMethod(description = "Teardown Browser instance.")
