@@ -33,7 +33,6 @@ public class HomePage {
 
     private String url = "http://automationpractice.com/index.php";
     private String title = "Google";
-    private By searchBox = By.name("q");
 
     // Methods
     @Step("When I navigate to the Home page.")
@@ -46,13 +45,6 @@ public class HomePage {
     public HomePage verifyBrowserTitleIsCorrect(){
         driver.verifyThat().browser().title().isEqualTo(title).perform();
         return this;
-    }
-
-    @Step("And I search for '{query}'.")
-    public Results searchForQuery(String query){
-        driver.element().type(searchBox, query)
-                .keyPress(searchBox, Keys.ENTER);
-        return new Results(driver);
     }
 
     @Step("Function that returns xpath for Signin button in the Upper Right Corner for Homepage")

@@ -18,20 +18,10 @@ public class TestClass {
     @Epic("SHAFT Web GUI Template")
     @Story("Google Basic Validations")
     @TmsLink("TC-009")
-    @Description("Given I am on the Home page,\nThen the browser title should be 'Google'.")
+    @Description("Given I am on the Home page,Then the browser title should be 'Google'.")
     @Test(description = "Check that Home Page Title is correct.")
     public void checkHomePageTitleIsCorrect() {
         new HomePage(driver).verifyBrowserTitleIsCorrect();
-    }
-
-    @Epic("SHAFT Web GUI Template")
-    @Story("Google Basic Validations")
-    @TmsLink("TC-010")
-    @Description("Given I am on the Home page,\nWhen I search for a valid query,\nThen the result stats will show some data (will not be empty).")
-    @Test(description = "Check that Result Stats is not empty after searching for a query.")
-    public void checkResultStatsIsNotEmptyAfterSearchingForAQuery() {
-        new HomePage(driver).searchForQuery(testData.getTestData("searchQuery"))
-                .assertResultStatsIsNotEmpty();
     }
 
     @BeforeClass(description = "Setup Test Data.")
