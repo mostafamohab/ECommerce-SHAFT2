@@ -2,70 +2,38 @@
 package TestPackage;
 
 //Libraries Used
-
+import java.io.IOException;
+import java.util.ArrayList;
 import com.shaft.driver.SHAFT;
-import com.shaft.tools.io.JSONFileManager;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
 import org.openqa.selenium.JavascriptExecutor;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
-import java.io.IOException;
-import java.lang.reflect.Method;
-
 
 //Main Class initialization as public class
-public class Mainclass2 {
+public class MainclassExcel {
 
 	private SHAFT.GUI.WebDriver driver;
-	private JSONFileManager testData;
+	private SHAFT.TestData.EXCEL testData;
+	private dataDriven d = new dataDriven();
 
-	private String Email;
-	private String Password;
-	private String FirstName;
-	private String LastName;
-	private String Day;
-	private String Month;
-	private String Year;
-	private String Company;
-	private String Address;
-	private String City;
-	private String State;
-	private String PostCode;
-	private String Other;
-	private String HomePhone;
-	private String MobilePhone;
-
-	@BeforeClass(alwaysRun = true,description = "Setup Test Data.")
+	@BeforeClass(description = "Setup Test Data.")
 	public void beforeClass(){
-		testData = new JSONFileManager(System.getProperty("testDataFiles")+"simpleJSON.json");
+		testData = new SHAFT.TestData.EXCEL("testDataFiles/excel.xlsx");
 	}
 
-	@BeforeMethod(alwaysRun = true,description = "Setup Browser instance.")
-	public void setUp(Method method) {
+	@BeforeMethod(description = "Setup Browser instance.")
+	public void setUp() {
 		driver = new SHAFT.GUI.WebDriver();
 		new HomePage(driver).navigate();
 
-		Email = testData.getTestData(method.getName() + ".Email");
-		Password = testData.getTestData(method.getName() + ".Password");
-		FirstName = testData.getTestData(method.getName() + ".FirstName");
-		LastName = testData.getTestData(method.getName() + ".LastName");
-		Day = testData.getTestData(method.getName() + ".Day");
-		Month = testData.getTestData(method.getName() + ".Month");
-		Year = testData.getTestData(method.getName() + ".Year");
-		Company = testData.getTestData(method.getName() + ".Company");
-		Address = testData.getTestData(method.getName() + ".Address");
-		City = testData.getTestData(method.getName() + ".City");
-		State = testData.getTestData(method.getName() + ".State");
-		PostCode = testData.getTestData(method.getName() + ".PostCode");
-		Other = testData.getTestData(method.getName() + ".Other");
-		HomePhone = testData.getTestData(method.getName() + ".HomePhone");
-		MobilePhone = testData.getTestData(method.getName() + ".MobilePhone");
 
 		// Setting Chrome Window Size to be maximized
 		driver.browser().maximizeWindow();
@@ -76,6 +44,11 @@ public class Mainclass2 {
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 1,description = "Sign Up")
 	public void signUp() throws IOException {
+
+		// create an object from dataDriven class
+		// create a new arraylist of strings in order to extract test data from excel
+		//dataDriven d = new dataDriven();
+		ArrayList<String> data = d.getData("Signup6");
 
 		// Create an object from javascript executor class
 		// Use java script in order to scroll by mouse till elements appearing
@@ -92,7 +65,7 @@ public class Mainclass2 {
 
 		// Enter Valid Email Address
 		new HomePage(driver)
-			.emailSignup(Email)
+			.emailSignup(data.get(1))
 			.clickCreateAccount();
 	}
 
@@ -101,6 +74,12 @@ public class Mainclass2 {
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 2,description = "Create New Account")
 	public void createAccount() throws IOException {
+
+		// create an object from dataDriven class
+		//dataDriven d = new dataDriven();
+
+		// create a new arraylist of strings in order to extract test data from excel
+		ArrayList<String> data = d.getData("Register6");
 
 		// Create an object from CreateAccountPage Class
 		// Click on Male Radio Button as a Gender
@@ -124,22 +103,22 @@ public class Mainclass2 {
 		// Click on Sign out Button
 		new CreateAccountpage(driver)
 			.chooseMale()
-			.enterFirstName(FirstName)
-			.enterLastName(LastName)
-			.enterPassword(Password)
-			.selectDay(Day)
-			.selectMonth(Month)
-			.selectYear(Year)
+			.enterFirstName(data.get(3))
+			.enterLastName(data.get(4))
+			.enterPassword(data.get(2))
+			.selectDay(data.get(5))
+			.selectMonth(data.get(6))
+			.selectYear(data.get(7))
 			.clickCheckBox1()
 			.clickCheckBox2()
-			.enterCompany(Company)
-			.enterAddress(Address)
-			.enterCity(City)
-			.enterState(State)
-			.enterPostCode(PostCode)
-			.enterOtherInfo(Other)
-			.enterHomePhone(HomePhone)
-			.enterMobilePhone(MobilePhone)
+			.enterCompany(data.get(8))
+			.enterAddress(data.get(9))
+			.enterCity(data.get(10))
+			.enterState(data.get(11))
+			.enterPostCode(data.get(12))
+			.enterOtherInfo(data.get(13))
+			.enterHomePhone(data.get(14))
+			.enterMobilePhone(data.get(15))
 			.submit()
 			.signOut();
 	}
@@ -150,13 +129,18 @@ public class Mainclass2 {
 	@Test(priority = 3,description = "Sign In")
 	public void signIn() throws IOException {
 
+		// create an object from dataDriven class
+		// create a new arraylist of strings in order to extract test data from excel
+		//dataDriven d = new dataDriven();
+		ArrayList<String> data = d.getData("Login6");
+
 		// Create an object from Homepage Class
 		// Enter Valid Email
 		// Enter Valid Password
 		// Press on Sign in Button
 		new HomePage(driver)
-			.enterEmailSignin(Email)
-			.enterPasswordSignin(Password)
+			.enterEmailSignin(data.get(1))
+			.enterPasswordSignin(data.get(2))
 			.clickSignIn();
 	}
 
@@ -277,7 +261,6 @@ public class Mainclass2 {
 			.hoverOnProductDesc()
 			.verifyOrderPlaced();
 	}
-
 
 	@AfterMethod(description = "Teardown Browser instance.")
 	public void tearDown() {
