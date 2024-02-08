@@ -3,7 +3,9 @@ package TestPackage;
 
 //Libraries Used
 import io.qameta.allure.Epic;
-import org.testng.annotations.BeforeSuite;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 
@@ -15,7 +17,7 @@ public class restAssured {
 
     // setting main url paramter in setup function that will be used in all
     // functions
-    @BeforeSuite
+    @BeforeClass
     public void setUp() {
 
         // Given - All input details
@@ -29,6 +31,8 @@ public class restAssured {
     // setting a function for Get post by {id} Rest API
     // GET https://jsonplaceholder.typicode.com/posts/1
     @Epic("SHAFT Web GUI Template")
+    @Story("ECommerce Basic Validations")
+    @TmsLink("TC-007")
     @Test(priority = 7)
     public void getTest1() {
         given().log().all().header("Cookie", "__cfduid=de2354a31bda903ee9b1614f176bc71691613051811").when()
@@ -41,6 +45,8 @@ public class restAssured {
     // setting a function for Create a Post Rest API
     // POST https://jsonplaceholder.typicode.com/posts
     @Epic("SHAFT Web GUI Template")
+    @Story("ECommerce Basic Validations")
+    @TmsLink("TC-008")
     @Test(priority = 8)
     public void getTest2() {
 

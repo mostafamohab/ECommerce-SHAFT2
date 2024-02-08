@@ -21,17 +21,19 @@ import pages.*;
 public class Mainclass {
 
 	private SHAFT.GUI.WebDriver driver;
-	private SHAFT.TestData.JSON testData;
+	private SHAFT.TestData.EXCEL testData;
+	private dataDriven d = new dataDriven();
 
 	@BeforeClass(description = "Setup Test Data.")
 	public void beforeClass(){
-		testData = new SHAFT.TestData.JSON("simpleJSON.json");
+		testData = new SHAFT.TestData.EXCEL("excel.xlsx");
 	}
 
 	@BeforeMethod(description = "Setup Browser instance.")
 	public void setUp() {
 		driver = new SHAFT.GUI.WebDriver();
 		new HomePage(driver).navigate();
+
 
 		// Setting Chrome Window Size to be maximized
 		driver.browser().maximizeWindow();
@@ -45,7 +47,7 @@ public class Mainclass {
 
 		// create an object from dataDriven class
 		// create a new arraylist of strings in order to extract test data from excel
-		dataDriven d = new dataDriven();
+		//dataDriven d = new dataDriven();
 		ArrayList<String> data = d.getData("Signup6");
 
 		// Create an object from javascript executor class
@@ -74,7 +76,7 @@ public class Mainclass {
 	public void createAccount() throws IOException {
 
 		// create an object from dataDriven class
-		dataDriven d = new dataDriven();
+		//dataDriven d = new dataDriven();
 
 		// create a new arraylist of strings in order to extract test data from excel
 		ArrayList<String> data = d.getData("Register6");
@@ -129,7 +131,7 @@ public class Mainclass {
 
 		// create an object from dataDriven class
 		// create a new arraylist of strings in order to extract test data from excel
-		dataDriven d = new dataDriven();
+		//dataDriven d = new dataDriven();
 		ArrayList<String> data = d.getData("Login6");
 
 		// Create an object from Homepage Class
