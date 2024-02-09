@@ -148,6 +148,7 @@ public class testClassJson {
 			.clickOnMore()
             .changeColor()
             .changeColor()
+            .changeColor()
 			.addtoCart();
 
 	}

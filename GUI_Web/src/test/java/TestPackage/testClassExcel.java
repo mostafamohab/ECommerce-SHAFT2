@@ -139,6 +139,7 @@ public class testClassExcel {
 			.clickOnMore()
             .changeColor()
             .changeColor()
+            .changeColor()
 			.addtoCart();
 
 	}
@@ -168,6 +169,7 @@ public class testClassExcel {
         new Blousespage(driver)
                 .hoverOnItem()
                 .clickOnMore()
+                .changeColor()
                 .changeColor()
                 .changeColor()
                 .addtoCart();
