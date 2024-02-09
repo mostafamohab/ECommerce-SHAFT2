@@ -23,7 +23,9 @@ public class HomePage {
     // Store Xpath for Email Text Field above Sign Up Button
     private By Emailsignup = By.xpath("//input[@id='email_create']");
     // Store Xpath for Create account Button Field
-    private By Createaccountbutton = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]/span[1]");
+    private By Createaccountbutton = By.xpath("//button[@id='SubmitCreate']//span");
+
+    private By emptyspace = By.xpath("//div[@class='submit']");
     // Store Xpath for Email Text Field above Password Text Field and Sign In Button
     private By Emailsignin = By.xpath("//input[@id='email']");
     // Store Xpath for Password Text Field above Sign In Button
@@ -31,7 +33,7 @@ public class HomePage {
     // Store Xpath for Sign In Button
     private By Signin = By.xpath("//p[@class='submit']//span[1]");
 
-    private String url = "http://automationpractice.com/index.php";
+    private String url = "http://www.automationpractice.pl/index.php";
     private String title = "Google";
 
     // Methods
@@ -56,25 +58,27 @@ public class HomePage {
     @Step("Function that returns xpath for Email Text Field in Create New Account Section")
     public HomePage emailSignup(String text) {
         driver.element().type(Emailsignup,text);
+        driver.element().click(emptyspace);
         return this;
     }
 
     @Step("Function that returns xpath for Create Account Button in Create New Account Section")
     public HomePage clickCreateAccount() {
-        driver.element().waitToBeReady(Createaccountbutton);
+        driver.element().waitToBeReady(Createaccountbutton,true);
         driver.element().click(Createaccountbutton);
         return this;
     }
 
     @Step("Function that returns xpath for Email Text Field above Password Text Field and Sign In Button")
     public HomePage enterEmailSignin(String text) {
-        driver.element().typeSecure(Emailsignin,text);
+        driver.element().waitToBeReady(Emailsignin,true);
+        driver.element().type(Emailsignin,text);
         return this;
     }
 
     @Step("Function that returns xpath for Password Field above Sign In Button")
     public HomePage enterPasswordSignin(String text) {
-        driver.element().typeSecure(Passwordsignin,text);
+        driver.element().type(Passwordsignin,text);
         return this;
     }
 

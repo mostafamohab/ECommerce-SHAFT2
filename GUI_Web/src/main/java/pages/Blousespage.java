@@ -18,7 +18,10 @@ public class Blousespage {
 
 	//Locators
 	// Store Xpath for Item
-	private By Item = By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]");
+	private By Item = By.xpath("//a[@title='Blouse'][@class='product_img_link']");
+
+	// Store Xpath for different Colour
+	private By Color = By.xpath("//a[@title='White']");
 	// Store Xpath for More Button
 	private By More = By.xpath("//span[contains(text(),'More')]");
 	// Store Xpath for Add to Cart Button
@@ -26,17 +29,17 @@ public class Blousespage {
 	// Store Xpath for Proceed to Check Out First Button
 	private By Checkout1 = By.xpath("//span[contains(text(),'Proceed to checkout')]");
 	// Store Xpath for Proceed to Check Out Second Button (Summary)
-	private By Checkout2 = By.xpath("//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]");
+	private By Checkout2 = By.xpath("(//a[@title='Proceed to checkout'][1])[2]");
 	// Store Xpath for Proceed to Check Out Third Button (Address)
 	private By Checkout3 = By.xpath("//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]");
 	// Store Xpath for agree to the terms and conditions Checkbox
 	private By Checkbox = By.xpath("//input[@id='cgv']");
 	// Store Xpath for Check Out Fourth Button (Shipping)
-	private By Checkout4 = By.xpath("//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]");
+	private By Checkout4 = By.xpath("//button[@name='processCarrier']");
 	// Store Xpath for Pay by Bank Wire Button (Payment)
 	private By Bankwire = By.xpath("//a[@class='bankwire']");
 	// Store Xpath for Confirm Order Button after Choosing payment Method (Payment)
-	private By Confirmorder = By.xpath("//span[contains(text(),'I confirm my order')]");
+	private By Confirmorder = By.xpath("(//button[@type='submit'][1])[2]");
 	// Store Xpath for Order Details (Plus) Button under order reference table label
 	private By Details = By.xpath("//span[@class='footable-toggle']");
 	// Store CSS for Product Decription Field content for order history
@@ -44,7 +47,7 @@ public class Blousespage {
 	// Store Xpath for Order Details Button
 	private By Details2 = By.xpath("//tbody/tr[1]/td[7]/a[1]/span[1]");
 	// Store Xpath for Order Reference Text that contains Reorder Button and Order Status
-	private By Orderplaced = By.xpath("//p[@class='dark']");
+	private By Orderplaced = By.xpath("//div[@id='block-history']//p");
 
 	//Methods
 	@Step("Function that returns xpath for Item")
@@ -56,6 +59,12 @@ public class Blousespage {
 	@Step("Function that returns xpath for More Button")
 	public Blousespage clickOnMore() {
 		driver.element().click(More);
+		return this;
+	}
+
+	@Step("Function that returns xpath for Changed Color")
+	public Blousespage changeColor() {
+		driver.element().click(Color);
 		return this;
 	}
 
@@ -86,13 +95,13 @@ public class Blousespage {
 
 	@Step("Function that returns xpath for agree to the terms and conditions Checkbox")
 	public Blousespage clickCheckBox() {
-		driver.element().clickAndHold(Checkbox);
+		driver.element().click(Checkbox);
 		return this;
 	}
 
 	@Step("Function that returns xpath for Check Out Fourth Button (Shipping)")
 	public Blousespage clickCheckOut4() {
-		driver.element().clickAndHold(Checkout4);
+		driver.element().click(Checkout4);
 		return this;
 	}
 
@@ -131,7 +140,7 @@ public class Blousespage {
 		String Expectedproductstatus = "placed";
 		try {
 			// Compare Variable for Order Status with the Status Placed
-			driver.verifyThat().element(Orderplaced).textTrimmed().contains(Expectedproductstatus);
+			driver.verifyThat().element(Orderplaced).textTrimmed().isEqualTo(Expectedproductstatus).perform();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

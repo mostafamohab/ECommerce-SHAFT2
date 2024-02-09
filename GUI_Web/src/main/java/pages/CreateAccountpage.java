@@ -18,13 +18,17 @@ public class CreateAccountpage {
 
 	// Locators
 	// Store Xpath for Male Radio Button Field
-	private By Male = By.xpath("//input[@name='id_gender'][@id='id_gender1']");
+	private By Male = By.xpath("//label[@for='id_gender1']");
 	// Store Xpath for Female Radio Button Field
-	private By Female = By.xpath("//input[@name='id_gender'][@id='id_gender2']");
+	private By Female = By.xpath("//label[@for='id_gender2']");
 	// Store Xpath for First Name Text Field
 	private By Firstname = By.xpath("//input[@id='customer_firstname']");
 	// Store Xpath for Last Name Text Field
 	private By Lastname = By.xpath("//input[@id='customer_lastname']");
+
+	// Store Xpath for Email Text Field
+	private By Email = By.xpath("//input[@id='email']");
+
 	// Store Xpath for Password Text Field
 	private By Password = By.xpath("//input[@id='passwd']");
 	// Store Xpath for Day Drop Down List Field
@@ -78,6 +82,12 @@ public class CreateAccountpage {
 		return this;
 	}
 
+	@Step("Function that returns xpath for Email Text Field")
+	public CreateAccountpage clickEmail() {
+		driver.element().click(Email);
+		return this;
+	}
+
 	@Step("Function that returns xpath for Password Text Field")
 	public CreateAccountpage enterPassword(String text) {
 		driver.element().typeSecure(Password,text);
@@ -86,19 +96,19 @@ public class CreateAccountpage {
 
 	@Step("Function that returns xpath for Day Drop Down List Field")
 	public CreateAccountpage selectDay(String text) {
-		driver.element().type(Day,text);
+		driver.element().select(Day,text);
 		return this;
 	}
 
 	@Step("Function that returns xpath for Month Drop Down List Field")
 	public CreateAccountpage selectMonth(String text) {
-		driver.element().type(Month,text);
+		driver.element().select(Month,text);
 		return this;
 	}
 
 	@Step("Function that returns xpath for Year Drop Down List Field")
 	public CreateAccountpage selectYear(String text) {
-		driver.element().type(Year,text);
+		driver.element().select(Year,text);
 		return this;
 	}
 
@@ -128,7 +138,7 @@ public class CreateAccountpage {
 
 	@Step("Function that returns xpath for City Text Field")
 	public CreateAccountpage enterCity(String text) {
-		driver.element().type(City,text);
+		driver.element().select(City,text);
 		return this;
 	}
 
