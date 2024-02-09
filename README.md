@@ -2,7 +2,7 @@
 
 An End to End Script for E-Commerce Website for Registration , Login and Cart Checkout Modules
 
-http://automationpractice.com
+http://www.automationpractice.pl
 
 Tools and Technologies:
 
@@ -20,22 +20,20 @@ Tools and Technologies:
 
 7- SHAFT Engine
 
-9- Javascript Executor class
+9- JSON File Manager class
 
-10- JSON File Manager class
+10- SHAFT.GUI.WebDriver driver class
 
-11- SHAFT.GUI.WebDriver driver class
+11- YML Files
 
-12- YML Files
+12- Apache POI
 
-13- Apache POI
+13- JSON files
 
 14- Rest Assured APIs
 
 15- Github Actions
 
-16- JSON files
+16- Extent Reports
 
 17- Allure Reports
-
-18- Extent Reports
