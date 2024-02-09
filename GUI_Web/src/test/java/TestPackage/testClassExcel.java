@@ -18,7 +18,7 @@ import pages.*;
 
 
 //Main Class initialization as public class
-public class mainClassExcel {
+public class testClassExcel {
 
 	private SHAFT.GUI.WebDriver driver;
 	private JSONFileManager testData;

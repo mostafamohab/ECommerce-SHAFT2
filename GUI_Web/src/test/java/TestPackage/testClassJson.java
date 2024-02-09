@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 
 //Main Class initialization as public class
-public class mainClassJson {
+public class testClassJson {
 
 	private SHAFT.GUI.WebDriver driver;
 	private JSONFileManager testData;
