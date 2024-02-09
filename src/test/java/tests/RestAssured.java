@@ -7,12 +7,11 @@ import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
 
 //some libraries needs being static
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-public class restAssured {
+public class RestAssured {
 
 
     // setting main url paramter in setup function that will be used in all
@@ -25,7 +24,7 @@ public class restAssured {
         // Then - Validate the Response
 
         // initializing rest assured base url as object from restassured services
-        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
+        io.restassured.RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
     }
 
     // setting a function for Get post by {id} Rest API
