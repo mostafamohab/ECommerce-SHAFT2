@@ -1,0 +1,46 @@
+{
+  "signUp": {
+    "Email": "Mostafa_mohab199991@hotmail.com"
+  },
+  "createAccount": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "FirstName":"Mostafa",
+    "LastName": "Mohab",
+    "Password": "1234567",
+    "Day": "1",
+    "Month": "May",
+    "Year": "2020"
+  },
+  "signIn": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567"
+  },
+  "addToCart": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567"
+  },
+  "cartCheckOut": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567"
+  },
+  "createAddress": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567",
+    "Company": "Codelab",
+    "Address": "Cairo,11111,egypt",
+    "City": "Cairo",
+    "State": "California",
+    "PostCode": "11757",
+    "Other": "no other info",
+    "HomePhone": "0226330123",
+    "MobilePhone": "01263301234"
+  },
+  "cartCheckOut2": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567"
+  },
+  "checkOrderDetails": {
+    "Email": "Mostafa_mohab199991@hotmail.com",
+    "Password": "1234567"
+  }
+}
