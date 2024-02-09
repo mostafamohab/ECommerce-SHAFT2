@@ -7,6 +7,7 @@ import com.shaft.tools.io.JSONFileManager;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +16,6 @@ import pages.*;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-
 
 //Main Class initialization as public class
 public class mainClassJson {
@@ -64,7 +64,8 @@ public class mainClassJson {
 		MobilePhone = testData.getTestData(method.getName() + ".MobilePhone");
 
 		driver = new SHAFT.GUI.WebDriver();
-		new HomePage(driver).navigate();
+		new HomePage(driver)
+                .navigate();
 
 		// Setting Chrome Window Size to be maximized
 		driver.browser().maximizeWindow();
@@ -74,13 +75,12 @@ public class mainClassJson {
 	@TmsLink("TC-001")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 1,description = "Sign Up")
-	public void signUp() //throws IOException {
-	{
+	public void signUp() {
 		// Create an object from Homepage Class
 		// Click on Sign Up Button
-		// Use java script in order to scroll by mouse till elements appearing
-		// Enter Valid Email Address
+
 		new HomePage(driver)
+            .navigate()
 			.clickSignUp()
 			.emailSignup(Email)
 			.clickCreateAccount();
@@ -92,44 +92,22 @@ public class mainClassJson {
 	@Test(priority = 2,description = "Create New Account")
 	public void createAccount() throws IOException {
 
-		// Create an object from CreateAccountPage Class
-		// Click on Male Radio Button as a Gender
-		// Enter First Name
-		// Enter Last Name
-		// Enter Password
-		// Select Day from Calendar
-		// Select Month from Calendar
-		// Select Year
-		// Click on Sign Up for News Letter Checkbox
-		// Click on Recieve Offers Checkbox
-		// Enter Company
-		// Enter Address
-		// Select City
-		// Select State
-		// Enter Postal
-		// Enter Additional Information
-		// Enter Homephone
-		// Enter Mobile Number
-		// Press on Register Button after filling all required data
-		// Click on Sign out Button
+        new HomePage(driver)
+            .navigate()
+            .clickSignUp()
+            .emailSignup(Email)
+            .clickCreateAccount();
+
 		new CreateAccountpage(driver)
 			.chooseMale()
 			.enterFirstName(FirstName)
 			.enterLastName(LastName)
+			.clickEmail()
 			.enterPassword(Password)
 			.selectDay(Day)
 			.selectMonth(Month)
 			.selectYear(Year)
 			.clickCheckBox1()
-			.clickCheckBox2()
-			.enterCompany(Company)
-			.enterAddress(Address)
-			.enterCity(City)
-			.enterState(State)
-			.enterPostCode(PostCode)
-			.enterOtherInfo(Other)
-			.enterHomePhone(HomePhone)
-			.enterMobilePhone(MobilePhone)
 			.submit()
 			.signOut();
 	}
@@ -140,11 +118,9 @@ public class mainClassJson {
 	@Test(priority = 3,description = "Sign In")
 	public void signIn() throws IOException {
 
-		// Create an object from Homepage Class
-		// Enter Valid Email
-		// Enter Valid Password
-		// Press on Sign in Button
 		new HomePage(driver)
+            .navigate()
+            .clickSignUp()
 			.enterEmailSignin(Email)
 			.enterPasswordSignin(Password)
 			.clickSignIn();
@@ -156,20 +132,21 @@ public class mainClassJson {
 	@Test(priority = 4,description = "Add to Cart")
 	public void addToCart() {
 
-		// Create an object from MyAccountPage Class
-		// Hover on Women Button on Menu
-		// Click on Blouse Sub Menu under Women Button from Menu Section
+        new HomePage(driver)
+            .navigate()
+            .clickSignUp()
+            .enterEmailSignin(Email)
+            .enterPasswordSignin(Password)
+            .clickSignIn();
+
 		new MyAccountpage(driver)
 			.hoverOnWomen()
 			.clickBlouses();
 
-		// Create an object from Blouses Page Class
-		// Hover on Item by Mouse Action
-		// Hover on Item by Mouse Action and Click on More Button
-		// Hover on Add to Cart Button and Click on It
 		new Blousespage(driver)
 			.hoverOnItem()
 			.clickOnMore()
+            .changeColor()
 			.addtoCart();
 
 	}
@@ -178,21 +155,73 @@ public class mainClassJson {
 	@TmsLink("TC-005")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 5,description = "Cart Check Out")
-	public void cartCheckout() {
+	public void cartCheckOut() {
 
-		// Create an object from Blouses Page Class
-		// Use Explicit Wait in order for First Checkout button to appear in Screen
-		// Move and Click by Mouse on First Checkout Button Element
-		// Move and Click by Mouse on Second Checkout Button Element
-		// Move and Click by Mouse on Third Checkout Button Element
-		// Hover and Click by Mouse on agree to the terms and conditions Checkbox
-		// Hover and Click by Mouse on Check Out Fourth Button (Shipping)
-		// Hover and Click by Mouse on Pay by Bank Wire Button (Payment)
-		// Hover and Click by Mouse on Confirm Order Button after Choosing payment
-		// Method (Payment)
-		new Blousespage(driver)
-			.clickCheckOut1()
-			.clickCheckOut2()
+        new HomePage(driver)
+                .navigate()
+                .clickSignUp()
+                .enterEmailSignin(Email)
+                .enterPasswordSignin(Password)
+                .clickSignIn();
+
+        new MyAccountpage(driver)
+                .hoverOnWomen()
+                .clickBlouses();
+
+        new Blousespage(driver)
+                .hoverOnItem()
+                .clickOnMore()
+                .changeColor()
+                .changeColor()
+                .changeColor()
+                .addtoCart();
+
+        new Blousespage(driver)
+                .clickCheckOut1()
+                .clickCheckOut2();
+    }
+
+    @Story("ECommerce Basic Validations")
+    @TmsLink("TC-006")
+    @Epic("SHAFT Web GUI Template")
+    @Test(priority = 6,description = "Cart Check Out")
+    public void createAddress() throws IOException {
+
+        new HomePage(driver)
+                .navigate()
+                .clickSignUp()
+                .enterEmailSignin(Email)
+                .enterPasswordSignin(Password)
+                .clickSignIn();
+
+        new MyAccountpage(driver)
+                .hoverOnWomen()
+                .clickBlouses();
+
+        new Blousespage(driver)
+                .hoverOnItem()
+                .clickOnMore()
+                .changeColor()
+                .changeColor()
+                .changeColor()
+                .addtoCart();
+
+        new Blousespage(driver)
+                .clickCheckOut1()
+                .clickCheckOut2();
+
+        new CreateAddresspage(driver)
+                .enterCompany(Company)
+                .enterAddress(Address)
+                .enterCity(City)
+                .enterState(State)
+                .enterPostCode(PostCode)
+                .enterOtherInfo(Other)
+                .enterHomePhone(HomePhone)
+                .enterMobilePhone(MobilePhone)
+                .save();
+
+        new Blousespage(driver)
 			.clickCheckOut3()
 			.clickCheckBox()
 			.clickCheckOut4()
@@ -200,38 +229,61 @@ public class mainClassJson {
 			.confirmOrder();
 	}
 
+    @Story("ECommerce Basic Validations")
+    @TmsLink("TC-007")
+    @Epic("SHAFT Web GUI Template")
+    @Test(priority = 7,description = "Cart Check Out with valid address")
+    public void cartCheckOut2() {
+
+        new HomePage(driver)
+                .navigate()
+                .clickSignUp()
+                .enterEmailSignin(Email)
+                .enterPasswordSignin(Password)
+                .clickSignIn();
+
+        new MyAccountpage(driver)
+                .hoverOnWomen()
+                .clickBlouses();
+
+        new Blousespage(driver)
+                .hoverOnItem()
+                .clickOnMore()
+                .changeColor()
+                .changeColor()
+                .changeColor()
+                .addtoCart();
+
+        new Blousespage(driver)
+                .clickCheckOut1()
+                .clickCheckOut2()
+                .clickCheckOut3()
+                .clickCheckBox()
+                .clickCheckOut4()
+                .clickBankWire()
+                .confirmOrder();
+    }
+
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-006")
+	@TmsLink("TC-008")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 6,description = "Check Order Details")
+	@Test(priority = 8,description = "Check Order Details")
 	public void checkOrderDetails() {
 
-		// Create an object from MyAccountPage Class
-		// Hover and Click by Mouse on My Account that contains username Label on
-		// upper right corner
-		// Use java script in order to scroll by mouse till elements appearing
-		// js.executeScript("window.scrollBy(0,500)", "");
-		// Hover and Click by Mouse on Order History and Details Button
+        new HomePage(driver)
+           .navigate()
+           .clickSignUp()
+           .enterEmailSignin(Email)
+           .enterPasswordSignin(Password)
+           .clickSignIn();
+
 		new MyAccountpage(driver)
 			.clickAccount()
 			.clickHistory();
 
-		// Create an object from Blouses Page Class
-		// Hover and Click by Mouse on Order Details Button under order reference
-		// table label
-		// Hover and Click by Mouse on Order Details Button
-		// Hover on Product Description Field for order history
-		// Assertion with JUnit in order to check if order is placed or not and checking
-		// if keyword "placed"
-		// exists in order history to check if order was placed successfully or not
-		// and printing Order is Successfully Placed in case of success
 		new Blousespage(driver)
-			.clickDetails()
-			.clickDetails2()
-			.hoverOnProductDesc()
 			.verifyOrderPlaced();
-	}
-
+    }
 
 	@AfterMethod(description = "Teardown Browser instance.")
 	public void tearDown() {
