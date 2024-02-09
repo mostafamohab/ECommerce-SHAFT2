@@ -2,7 +2,7 @@
 
 An End to End Script for E-Commerce Website for Registration , Login and Cart Checkout Modules
 
-http://automationpractice.com
+http://www.automationpractice.pl
 
 Tools and Technologies:
 
