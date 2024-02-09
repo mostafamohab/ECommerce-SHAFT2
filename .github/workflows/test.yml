@@ -60,6 +60,13 @@ jobs:
           name: ${{ runner.os }} - Desktop Browsers Tests Allure Report
           path: "GUI_Web/generatedReport_*.zip"
 
+      - name: Upload Allure Report HTML as Pipeline Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+           name: ${{ runner.os }} - Desktop Browsers Tests Allure Report HTML
+           path: "allure-report/index.html"
+
       - name: Upload Extent Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v4
