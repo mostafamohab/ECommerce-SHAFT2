@@ -74,7 +74,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-001")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 1,description = "Sign Up")
+	@Test(priority = 9,description = "Sign Up")
 	public void signUp() {
 		// Create an object from Homepage Class
 		// Click on Sign Up Button
@@ -89,7 +89,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-002")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 2,description = "Create New Account")
+	@Test(priority = 10,description = "Create New Account")
 	public void createAccount() throws IOException {
 
         new HomePage(driver)
@@ -115,7 +115,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-003")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 3,description = "Sign In")
+	@Test(priority = 11,description = "Sign In")
 	public void signIn() throws IOException {
 
 		new HomePage(driver)
@@ -129,7 +129,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-004")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 4,description = "Add to Cart")
+	@Test(priority = 12,description = "Add to Cart")
 	public void addToCart() {
 
         new HomePage(driver)
@@ -156,7 +156,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-005")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 5,description = "Cart Check Out")
+	@Test(priority = 13,description = "Cart Check Out")
 	public void cartCheckOut() {
 
         new HomePage(driver)
@@ -186,7 +186,7 @@ public class TestClassJson {
     @Story("ECommerce Basic Validations")
     @TmsLink("TC-006")
     @Epic("SHAFT Web GUI Template")
-    @Test(priority = 6,description = "Cart Check Out")
+    @Test(priority = 14,description = "Cart Check Out")
     public void createAddress() throws IOException {
 
         new HomePage(driver)
@@ -234,7 +234,7 @@ public class TestClassJson {
     @Story("ECommerce Basic Validations")
     @TmsLink("TC-007")
     @Epic("SHAFT Web GUI Template")
-    @Test(priority = 7,description = "Cart Check Out with valid address")
+    @Test(priority = 15,description = "Cart Check Out with valid address")
     public void cartCheckOut2() {
 
         new HomePage(driver)
@@ -269,7 +269,7 @@ public class TestClassJson {
 	@Story("ECommerce Basic Validations")
 	@TmsLink("TC-008")
 	@Epic("SHAFT Web GUI Template")
-	@Test(priority = 8,description = "Check Order Details")
+	@Test(priority = 16,description = "Check Order Details")
 	public void checkOrderDetails() {
 
         new HomePage(driver)

@@ -32,7 +32,7 @@ public class RestAssured {
     @Epic("SHAFT Web GUI Template")
     @Story("ECommerce Basic Validations")
     @TmsLink("TC-007")
-    @Test(priority = 7)
+    @Test(priority = 17)
     public void getTest1() {
         given().log().all().header("Cookie", "__cfduid=de2354a31bda903ee9b1614f176bc71691613051811").when()
                 .get("posts/1").then().log().all().assertThat().statusCode(200)
@@ -46,7 +46,7 @@ public class RestAssured {
     @Epic("SHAFT Web GUI Template")
     @Story("ECommerce Basic Validations")
     @TmsLink("TC-008")
-    @Test(priority = 8)
+    @Test(priority = 18)
     public void getTest2() {
 
         given().log().all().header("Cookie", "__cfduid=de2354a31bda903ee9b1614f176bc71691613051811")
