@@ -1,5 +1,5 @@
 //Package that contains all test classes
-package TestPackage;
+package tests;
 
 //Libraries Used
 import io.qameta.allure.Epic;

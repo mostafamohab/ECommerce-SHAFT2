@@ -1,4 +1,4 @@
-package TestPackage;
+package tests;
 
 import com.shaft.driver.SHAFT;
 import io.qameta.allure.Description;
