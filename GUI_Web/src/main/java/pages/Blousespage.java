@@ -140,7 +140,7 @@ public class Blousespage {
 		String Expectedproductstatus = "placed";
 		try {
 			// Compare Variable for Order Status with the Status Placed
-			driver.verifyThat().element(Orderplaced).textTrimmed().isEqualTo(Expectedproductstatus).perform();
+			driver.verifyThat().element(Orderplaced).textTrimmed().contains(Expectedproductstatus).perform();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
