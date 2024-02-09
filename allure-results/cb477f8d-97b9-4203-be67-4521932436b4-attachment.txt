@@ -1,0 +1,171 @@
+[INFO ] 2024-02-09 23:47:14.339 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                                    Powered by [1mSHAFT v.8.1.20240115[22m                                                    
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:14.352 [main] ReportManager - Checking for engine updates...
+[DEBUG] 2024-02-09 23:47:16.162 [main] BasicClientConnectionManager - Get connection for route {s}->https://api.github.com:443
+[DEBUG] 2024-02-09 23:47:16.343 [main] DefaultClientConnectionOperator - Connecting to api.github.com:443
+[DEBUG] 2024-02-09 23:47:17.199 [main] RequestAddCookies - CookieSpec selected: ignoreCookies
+[DEBUG] 2024-02-09 23:47:17.200 [main] RequestAuthCache - Auth cache not set in the context
+[DEBUG] 2024-02-09 23:47:17.201 [main] RequestTargetAuthentication - Target auth state: UNCHALLENGED
+[DEBUG] 2024-02-09 23:47:17.201 [main] RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+[DEBUG] 2024-02-09 23:47:17.201 [main] DefaultClientConnection - Sending request: GET /repos/ShaftHQ/SHAFT_ENGINE/releases/latest HTTP/1.1
+[DEBUG] 2024-02-09 23:47:17.201 [main] wire -  >> "GET /repos/ShaftHQ/SHAFT_ENGINE/releases/latest HTTP/1.1[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "Accept: */*[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "Host: api.github.com[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] wire -  >> "[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> GET /repos/ShaftHQ/SHAFT_ENGINE/releases/latest HTTP/1.1
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> Accept: */*
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> Host: api.github.com
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> Connection: Keep-Alive
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+[DEBUG] 2024-02-09 23:47:17.202 [main] headers - >> Accept-Encoding: gzip,deflate
+[DEBUG] 2024-02-09 23:47:17.961 [main] wire -  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Server: GitHub.com[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Date: Fri, 09 Feb 2024 21:47:16 GMT[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Cache-Control: public, max-age=60, s-maxage=60[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Vary: Accept, Accept-Encoding, Accept, X-Requested-With[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "ETag: W/"61a0531f8a2100b2f849cde6530a9bd454c317168702327302e1e803a2aca13f"[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Last-Modified: Tue, 16 Jan 2024 07:50:53 GMT[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-GitHub-Media-Type: github.v3; format=json[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "x-github-api-version-selected: 2022-11-28[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Strict-Transport-Security: max-age=31536000; includeSubdomains; preload[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-Frame-Options: deny[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-XSS-Protection: 0[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Content-Encoding: gzip[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-RateLimit-Limit: 60[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-RateLimit-Remaining: 57[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-RateLimit-Reset: 1707517940[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-RateLimit-Resource: core[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "X-RateLimit-Used: 3[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.963 [main] wire -  << "Accept-Ranges: bytes[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.964 [main] wire -  << "Content-Length: 964[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.964 [main] wire -  << "X-GitHub-Request-Id: D3B9:F5F16:10E1582E:110F21BF:65C69D63[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.964 [main] wire -  << "[\r][\n]"
+[DEBUG] 2024-02-09 23:47:17.964 [main] DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << HTTP/1.1 200 OK
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Server: GitHub.com
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Date: Fri, 09 Feb 2024 21:47:16 GMT
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Content-Type: application/json; charset=utf-8
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Cache-Control: public, max-age=60, s-maxage=60
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Vary: Accept, Accept-Encoding, Accept, X-Requested-With
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << ETag: W/"61a0531f8a2100b2f849cde6530a9bd454c317168702327302e1e803a2aca13f"
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << Last-Modified: Tue, 16 Jan 2024 07:50:53 GMT
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << X-GitHub-Media-Type: github.v3; format=json
+[DEBUG] 2024-02-09 23:47:17.964 [main] headers - << x-github-api-version-selected: 2022-11-28
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Access-Control-Allow-Origin: *
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-Frame-Options: deny
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-Content-Type-Options: nosniff
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-XSS-Protection: 0
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Content-Security-Policy: default-src 'none'
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Content-Encoding: gzip
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-RateLimit-Limit: 60
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-RateLimit-Remaining: 57
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-RateLimit-Reset: 1707517940
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-RateLimit-Resource: core
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-RateLimit-Used: 3
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Accept-Ranges: bytes
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << Content-Length: 964
+[DEBUG] 2024-02-09 23:47:17.965 [main] headers - << X-GitHub-Request-Id: D3B9:F5F16:10E1582E:110F21BF:65C69D63
+[DEBUG] 2024-02-09 23:47:17.973 [main] RestAssuredHttpBuilder - Parsing response as: application/json; charset=utf-8
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xb5][0x96]ao[0xdb]6[0x10][0x86][0xff][\n]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "[0xa1][0xa2][0x18][0xe0][0xd9][0x92]%[[0x8e]#[0xa0][0xe8][0x92]&m[0x3],[0x9][0xda][0x6][0x18][0xb0][0xb6]0([0xe9],q[0xa5]H[0x82][0xa4][0xec][0xba]F[0xfe]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "[0xfb][0x8e][0x92]b$B[0xeb]tq[0x7][0x10]A[0x93][0xcf][0x1d][0x8f]w[0xef]q[0xeb][0xd5][0x9a]{[0x89]WZ[0xab]L[0x12][0x4]T1[0xbf]`[0xb6][0xac]S?[0x93]U[0xa0]AI[0x13]|([0xe9][0xd2][0xbe]}[0x17]|x{[0xf2][0xfa]fq~[0xf5][0xe6][0xe2][0xea][0x1c][0xff][0xe2]@[\r][0x98] [0x9c][0x1c][0x85][0xf1]<:[0x9a]xC[0x8f][0x1a][0x3][0xd6],~[0x1d]3h[0x89][0x88][0xae][0x15][0x97]4[0xef][0xa1][0xdb]I[0xf3]d[0x97];[0xfc][0xf6][0xa5][0xa0][0x15][0xc]9M[0x81][0xdf][0xa2][0xad][0xd2]V[0xbc]g[0xe9]^P[0xf6][0x87][0xc3][0xd2]"[0x98][0xfb][0xa1][0x1f][0x8d][0xa3][0xe9]8[0xc]c[0xc4][0xb1][0xdc]KvQ[0xc2] [0xd5][0xb6][0x94][0xda]K[0xb6][0x1e][0x97][0x5][0x13][0x18][0xfd][0x16]>[0xa2][0x99]eR[0x98][0x8f][0xa9][0xb4][0x9f][0xbb]m[0xd3]p~<[0x8f][0xe6][0xd1][0xd0][0x13]2[0x87][0x85]#y[0x97]g[0x97][0xb3]w[0xd5][0xf1][0xf8][0xea][0xec]|z}Sl[0xae][0xcf].^[0xb8][0xd8][0xaf][0xa8][0xa5][0xba][0x1f][0xfb]f[0xf2].@[0xb5][0x1][0x9d]IaA[0xd8][0xe6]z[0x99][0x8][0xc2]x2[0x9b][0xbf]\[0xbd][0x98]"[0xa1][0xd0][0x1d][0xa3]1[0xe3]b[0xbe]/7[0x1c][0xcc][0x4][0xf]][0x1e][0x9f][0xa2][0xf3][0xcf][0xe3][0xb3]G[0x83]H[0x95][0xea]o[0xc6]=K[0xc9][0xb9]\#[0xb7][0x8c][0x87]i[0xb9][0xd7]t[0xb0][0x83][0xec][0x80]L[0x14][0x87][0x3][0x11][0xb2][\r][0xa4]-[0x1]c[0x8c]GwyR0[0xf3]X[0xb6][0xef]w[0xb5][0x1]l1[0x88][0xc6][0xe2][0xdd]:[0xa4][0xc1][0xeb][0xd2][0xd0][0xcf][0xf3]^Y[0xee][0x87]v[0x8]tv-[0xd0][0xcf]mS[0xc5][\r][0xbb]NM[0xa6][0x99]j[0xb2][0xec][0x90][0x80]<[0x0]!X[0xea][0x82][\n]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "[0xf6][0x8d][0x1e][0xc]F[0x90]A^#;[0x87]8[0xd8][0x0][0x10][0x4]+L[0xf5][0x83]H-a[0x1b]([0xcd]V4[0xdb][0xb8]0j[0xc8][0x80][0xad][0xf0][0x8e][0xe][0xa7][0xf7]P[0x8][0xb7][0x1b][0x5]X|[0xa7][0xd2][0xba][0xb]c[0x16][0x16]4[0xaf][0x9c]H,)7p{_[0x7][0xde][0x9f]/[0xbe][0xac][0xcf][0xae]_[0xbd][0x81][0x9b][0x99][0x99]^[0xfc]y5;u[0x0]Z,[0x9c][0x9a]![0xa4]'C[0x98]Y[0x5][0xd8][0x5][0x16]~[0xc5],3%[0xae][0xa8]([0xa2][0x91][0xf9][0xdd][0xf5][0xb9]F[0xd9][0xef][0xc][0xf]=[0xa5][0xa1][0x93][0xfc][0xdd]T[0xa6][0x81]Z[0x8c][0x3][0xc5]U[0x9e][0xd3][0xbb][0xd1]8[0x1c][0x85][0xb3][0x9b][0xf1]Q[0x12][0x8f][0x93]h[0xf6]7[0xa2]U[0x9d]r[0xb4][0xf5][0xc3]U[0xf1][0xc4][0xad][0xea]T>[0xf9][0xf8][0xd9][0x1d]@[0xa7][0x94][0xf7][0xf5][0xf7][0xe7][0x1b]S[0xb7][0xbf]/[0xc2][0xdf][0x98]:[0x8][0xdb][0xed][0xef]cS[0x99]o[0xf0][0xf4][0xcf][0x9e][0x91][0xbf]Jj3[0xe4]UIE[0x1][0xf9]'1 '[0x9c][0xd7][0x1a][0x8][0x9e][0x1f][0x15][0x17]4[0xf9][0x87][0xd4][0x82]YRJK[0x96][0xec]+I7[0xe4][0x8f][0xcb][0x1a][0xab]uIO[\n]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "Zm[0x8][0x13][0xe4][0xae][0xf]?[0xd6]nT[0xcd]y[0x10]N[0xa7][0xb1][0xb3]sZW[0x8a]`[0xe9][0xf8]T[0xd1][0xac][0x4][0xbf][0xa2][0x98][0xf6][0xbe]A[0xdb]K[0xa6]![0xb9][0x1b][0x8c],[0x18]+[\n]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] wire -  << "[0xb2][0xd4][0xb2]"[0x13]?[0xf2]'[0xc4][0xca]f[0x10]7[0xbe][0xe4][0xa0]@[0xe4][0x14][0x5][0xfc])[0x9e][0xcc][0xec][0x89][0xe2]5[0xf6]9[0x93]4~[0x8d]v[0xee][0xb4][0xd3][0xff][0x93];G[0xce][0x1d][0x8c]2[0xe4]dM1[0xe8]mo[0xc5][0x83]a[0xea]S[0xde]iU{[0x5][0xb2][0xa4][0xe9][0xa5],[0x19]<[0xe5][0xd8][0xc7][0x8d][0x1d]N[0xb]<aAR[0x96]3[0x2][0x82][0xa6][0x1c]*T[0x9e][0xc3][0xf9]q[0xb4][0xb]+v[0x1e][0x92][0xc3]j[0xd4]^[0x13][0x88][0x8c][0x81]![0x85][0x96][0xb5]"k|[0xb1][0x91][0x88][0xd4]*[0xc7]z4[0x87]_f[0x1c]:[0xab][0xf7][0xe5][0x83]t[0xb5]OP[0x6][0xd4]/8[0xd6][0xe4][0x93]p[0xbf][0xc1][0xe0]5&rW3[0xf8][0x1a][0x1a][0xc][0x92][0x9f].[0x1][0xd4]1E5[0xdc]+[0xc8]q[0xe4][0xfb]~O[0xf4]P[0xa2][0xda]W[0x95]{o[0xed]}[0xcf][0xfc][0xa7][0xb7].[0xf6][0xd4];.*[0x96][0xb4][0x94][0xa3][0xae][0xd6][0x2][0x85]0[0x1c]z[0xbf][0x87][0xcd]g[0x84][0x9f][0xf1][0xd0][0xe3][0xb4].PkqTJ[0xa9])[0xaa][0x5][0xe][0xf1][0x15][0xb6][0xc4].[0x8e][0xef],7[0xf]T[0xe3]N[0x1c]i[0x99]}[0x81]v[0x8][0x1b]08[0x87][0x8a][0xef]2[0xa9][0xe9][0xd8][0x9d][0x85][0xc9][0xed][0xbf]F[0x17][0xad]t[0xb6][0xb][0x0][0x0]"
+[DEBUG] 2024-02-09 23:47:17.974 [main] RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[DEBUG] 2024-02-09 23:47:18.025 [main] BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3eadfbbb
+[DEBUG] 2024-02-09 23:47:18.025 [main] BasicClientConnectionManager - Connection can be kept alive indefinitely
+[INFO ] 2024-02-09 23:47:18.625 [main] ReportManager - You're using the latest engine version "8.1.20240115". ?
+[INFO ] 2024-02-09 23:47:18.626 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative File Path: "target/engine_check"".
+[INFO ] 2024-02-09 23:47:18.627 [main] ReportManager - File Action "WriteToFile" successfully performed. With the following test data "Target File Path: "C:\Users\mosta\IdeaProjects\ECommerce-SHAFT2\target\engine_check"".
+[INFO ] 2024-02-09 23:47:19.155 [main] ReportManager - Loaded OpenCV "opencv_java490".
+[INFO ] 2024-02-09 23:47:19.156 [main] ReportManager - Initializing Allure Reporting Environment...
+[INFO ] 2024-02-09 23:47:19.237 [main] ReportManager - Initializing Extent Reporting Environment...
+[INFO ] 2024-02-09 23:47:19.469 [main] ReportManager - Initializing Summary Reporting Environment...
+[INFO ] 2024-02-09 23:47:19.479 [main] ReportManager - TestNG run detected...
+[DEBUG] 2024-02-09 23:47:19.634 [Finalizer] DefaultClientConnection - Connection 0.0.0.0:54201<->140.82.121.6:443 closed
+[INFO ] 2024-02-09 23:47:19.674 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of suite setup configuration method                                             
+                                          'com.shaft.listeners.internal.ConfigurationHelper.suiteSetup'                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:19.702 [main] ReportManager - Initializing Important Links...
+[INFO ] 2024-02-09 23:47:19.709 [main] ReportManager - Initializing Properties...
+[INFO ] 2024-02-09 23:47:19.776 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of before class configuration method                                             
+                                                          'tests.TestClass.beforeClass'                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:19.780 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "simpleJSON.json"".
+[INFO ] 2024-02-09 23:47:19.781 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/simpleJSON.json"".
+[INFO ] 2024-02-09 23:47:19.782 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/simpleJSON.json"".
+[INFO ] 2024-02-09 23:47:19.784 [main] ReportManager - Successfully created attachment 'Test Data - JSON'
+[INFO ] 2024-02-09 23:47:19.792 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                            Starting execution of before method configuration method                                            
+                                                         'tests.TestClass.beforeMethod'                                                         
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:19.807 [main] ReportManager - Setting "targetOperatingSystem" property with "windows".
+[INFO ] 2024-02-09 23:47:19.816 [main] ReportManager - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized], extensions: [], prefs: {download.default_directory: C:\Users\mosta\IdeaProjects..., download.prompt_for_download: false, profile.default_content_settings.popups: 0}}, pageLoadStrategy: normal, timeouts: {pageLoad: 60000, script: 60000}, unhandledPromptBehavior: ignore, webSocketUrl: true}
+[INFO ] 2024-02-09 23:47:19.817 [main] ReportManager - Attempting to run locally on: "windows | Chrome".
+[INFO ] 2024-02-09 23:47:19.818 [main] ReportManager - Identifying OS/Driver combination. Please note that if a new browser/driver executable will be downloaded it may take some time depending on your connection...
+[WARN ] 2024-02-09 23:47:21.409 [main] ReportManager - Feb 09, 2024 11:47:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[WARN ] 2024-02-09 23:47:21.410 [main] ReportManager - WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
+[INFO ] 2024-02-09 23:47:21.418 [main] ReportManager - Successfully Opened: "windows | Chrome".
+[INFO ] 2024-02-09 23:47:21.486 [main] ReportManager - Target URL: "http://www.automationpractice.pl/index.php"
+[INFO ] 2024-02-09 23:47:21.523 [main] ReportManager - Initial URL: "about:blank"
+[INFO ] 2024-02-09 23:47:50.799 [main] ReportManager - Navigate to url "http://www.automationpractice.pl/index.php".
+[INFO ] 2024-02-09 23:47:50.901 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 1' test cases in the current suite                                        
+                                           Test Method: 'tests.TestClass.checkHomePageTitleIsCorrect'                                           
+                                           Test Description: 'Check that Home Page Title is correct.'                                           
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:50.975 [main] ReportManager - Get current window title "My Shop".
+[INFO ] 2024-02-09 23:47:50.976 [main] ReportManager - Expected "Google", and actual "My Shop"
+[INFO ] 2024-02-09 23:47:53.968 [main] ReportManager - Verification "ValidateBrowserAttribute" FAILED. Expected "Value Should be 'Google' for the 'title' attribute" and Actual "My Shop". Comparison Type "EQUALS". Validation Type "POSITIVE".
+[INFO ] 2024-02-09 23:47:54.002 [main] ReportManager - Successfully created attachment 'Screenshot - 1707515271484_checkHomePageTitleIsCorrect_ValidateBrowserAttribute_failed'
+[INFO ] 2024-02-09 23:47:54.003 [main] ReportManager - Successfully created attachment 'Validation Test Data - Failure Reason'
+[INFO ] 2024-02-09 23:47:54.015 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Current Method log: checkHomePageTitleIsCorrect'
+[INFO ] 2024-02-09 23:47:54.016 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                Finished Execution of Test Method: 'tests.TestClass.checkHomePageTitleIsCorrect'                                
+                                           Test Description: 'Check that Home Page Title is correct.'                                           
+                                                              Test Status: 'Failed'                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:54.041 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of after method configuration method                                             
+                                                          'tests.TestClass.afterMethod'                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:54.154 [main] ReportManager - Successfully Closed Driver.
+[INFO ] 2024-02-09 23:47:54.158 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                           Starting execution of engine teardown configuration method                                           
+                                        'com.shaft.listeners.internal.ConfigurationHelper.engineTeardown'                                        
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2024-02-09 23:47:54.158 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Execution log'
+[INFO ] 2024-02-09 23:47:54.159 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/logs/log4j.log"".
+[INFO ] 2024-02-09 23:47:54.159 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "target/logs/log4j.log"".
