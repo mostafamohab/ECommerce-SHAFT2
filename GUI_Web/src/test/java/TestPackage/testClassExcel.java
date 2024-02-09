@@ -138,6 +138,7 @@ public class testClassExcel {
 			.hoverOnItem()
 			.clickOnMore()
             .changeColor()
+            .changeColor()
 			.addtoCart();
 
 	}
