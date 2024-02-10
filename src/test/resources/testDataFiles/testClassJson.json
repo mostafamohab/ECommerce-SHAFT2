@@ -1,9 +1,9 @@
 {
   "signUp": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com"
+    "Email": "Mostafa2mohab@hotmail.com"
   },
   "createAccount": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "FirstName":"Mostafa",
     "LastName": "Mohab",
     "Password": "1234567",
@@ -12,19 +12,19 @@
     "Year": "2020"
   },
   "signIn": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567"
   },
   "addToCart": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567"
   },
   "cartCheckOut": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567"
   },
   "createAddress": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567",
     "Company": "Codelab",
     "Address": "Cairo,11111,egypt",
@@ -36,11 +36,11 @@
     "MobilePhone": "01263301234"
   },
   "cartCheckOut2": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567"
   },
   "checkOrderDetails": {
-    "Email": "Mostafa_mohab19999123450@hotmail.com",
+    "Email": "Mostafa2mohab@hotmail.com",
     "Password": "1234567"
   }
 }

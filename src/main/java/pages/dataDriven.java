@@ -26,7 +26,7 @@ public class dataDriven {
 		ArrayList<String> array = new ArrayList<String>();
 
 		// file input stream
-		FileInputStream fis = new FileInputStream("C:\\Users\\mosta\\IdeaProjects\\ECommerce-SHAFT2\\src\\test\\resources\\testDataFiles\\TestClassExcel.xlsx");
+		FileInputStream fis = new FileInputStream("src\\test\\resources\\testDataFiles\\TestClassExcel.xlsx");
 
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
