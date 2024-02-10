@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 //some libraries needs being static
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-public class RestAssured {
+public class TestRestAssured {
 
 
     // setting main url paramter in setup function that will be used in all
@@ -31,7 +31,7 @@ public class RestAssured {
     // GET https://jsonplaceholder.typicode.com/posts/1
     @Epic("SHAFT Web GUI Template")
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-007")
+    @TmsLink("TC-17")
     @Test(priority = 17)
     public void getTest1() {
         given().log().all().header("Cookie", "__cfduid=de2354a31bda903ee9b1614f176bc71691613051811").when()
@@ -45,7 +45,7 @@ public class RestAssured {
     // POST https://jsonplaceholder.typicode.com/posts
     @Epic("SHAFT Web GUI Template")
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-008")
+    @TmsLink("TC-18")
     @Test(priority = 18)
     public void getTest2() {
 

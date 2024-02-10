@@ -72,7 +72,7 @@ public class TestClassJson {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-001")
+	@TmsLink("TC-09")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 9,description = "Sign Up")
 	public void signUp() {
@@ -87,7 +87,7 @@ public class TestClassJson {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-002")
+	@TmsLink("TC-10")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 10,description = "Create New Account")
 	public void createAccount() throws IOException {
@@ -113,7 +113,7 @@ public class TestClassJson {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-003")
+	@TmsLink("TC-11")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 11,description = "Sign In")
 	public void signIn() throws IOException {
@@ -127,7 +127,7 @@ public class TestClassJson {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-004")
+	@TmsLink("TC-12")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 12,description = "Add to Cart")
 	public void addToCart() {
@@ -154,7 +154,7 @@ public class TestClassJson {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-005")
+	@TmsLink("TC-13")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 13,description = "Cart Check Out")
 	public void cartCheckOut() {
@@ -184,7 +184,7 @@ public class TestClassJson {
     }
 
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-006")
+    @TmsLink("TC-14")
     @Epic("SHAFT Web GUI Template")
     @Test(priority = 14,description = "Cart Check Out")
     public void createAddress() throws IOException {
@@ -232,7 +232,7 @@ public class TestClassJson {
 	}
 
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-007")
+    @TmsLink("TC-15")
     @Epic("SHAFT Web GUI Template")
     @Test(priority = 15,description = "Cart Check Out with valid address")
     public void cartCheckOut2() {
@@ -267,7 +267,7 @@ public class TestClassJson {
     }
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-008")
+	@TmsLink("TC-16")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 16,description = "Check Order Details")
 	public void checkOrderDetails() {

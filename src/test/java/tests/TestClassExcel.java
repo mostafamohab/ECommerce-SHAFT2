@@ -46,7 +46,7 @@ public class TestClassExcel {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-001")
+	@TmsLink("TC-01")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 1,description = "Sign Up")
 	public void signUp() throws IOException {
@@ -62,7 +62,7 @@ public class TestClassExcel {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-002")
+	@TmsLink("TC-02")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 2,description = "Create New Account")
 	public void createAccount() throws IOException {
@@ -94,7 +94,7 @@ public class TestClassExcel {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-003")
+	@TmsLink("TC-03")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 3,description = "Sign In")
 	public void signIn() throws IOException {
@@ -113,7 +113,7 @@ public class TestClassExcel {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-004")
+	@TmsLink("TC-04")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 4,description = "Add to Cart")
 	public void addToCart() throws IOException {
@@ -145,7 +145,7 @@ public class TestClassExcel {
 	}
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-005")
+	@TmsLink("TC-05")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 5,description = "Cart Check Out")
 	public void cartCheckout() throws IOException {
@@ -180,7 +180,7 @@ public class TestClassExcel {
     }
 
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-006")
+    @TmsLink("TC-06")
     @Epic("SHAFT Web GUI Template")
     @Test(priority = 6,description = "Cart Check Out")
     public void createAddress() throws IOException {
@@ -236,7 +236,7 @@ public class TestClassExcel {
 	}
 
     @Story("ECommerce Basic Validations")
-    @TmsLink("TC-007")
+    @TmsLink("TC-07")
     @Epic("SHAFT Web GUI Template")
     @Test(priority = 7,description = "Cart Check Out with valid address")
     public void cartCheckout2() throws IOException {
@@ -276,7 +276,7 @@ public class TestClassExcel {
     }
 
 	@Story("ECommerce Basic Validations")
-	@TmsLink("TC-008")
+	@TmsLink("TC-08")
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 8,description = "Check Order Details")
 	public void checkOrderDetails() throws IOException {
