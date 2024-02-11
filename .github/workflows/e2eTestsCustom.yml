@@ -15,8 +15,6 @@ on:
         description: 'Path to Tests to be Executed'
         default: ''
 
-env:
-
 jobs:
   Custom_Linux_Grid:
     runs-on: [ self-hosted, wfc ]
