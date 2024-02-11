@@ -61,7 +61,7 @@ jobs:
           files: "extent-reports/ExtentReports_*.html"
 
   Chrome_Custom_Linux_Grid:
-    runs-on: [ self-hosted, wfc ]
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -113,7 +113,7 @@ jobs:
           files: "extent-reports/ExtentReports_*.html"
 
   Edge_Custom_Linux_Grid:
-    runs-on: [ self-hosted, wfc ]
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
