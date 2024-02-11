@@ -37,9 +37,6 @@ public class TestClassExcel {
 
 		new HomePage(driver)
                 .navigate();
-
-		// Setting Chrome Window Size to be maximized
-		driver.browser().maximizeWindow();
 	}
 
 	@Story("ECommerce Basic Validations")
@@ -62,9 +59,6 @@ public class TestClassExcel {
 	@Epic("SHAFT Web GUI Template")
 	@Test(priority = 2,description = "Create New Account")
 	public void createAccount() throws IOException {
-	   // create an object from dataDriven class
-       ArrayList<String> data = d.getData("Signup6");
-
         new HomePage(driver)
             .navigate()
             .clickSignUp()
@@ -72,7 +66,7 @@ public class TestClassExcel {
             .clickCreateAccount();
 
 		// create a new arraylist of strings in order to extract test data from excel
-		data = d.getData("Register6");
+		ArrayList<String> data = d.getData("Register6");
 
 		new CreateAccountpage(driver)
 			.chooseMale()

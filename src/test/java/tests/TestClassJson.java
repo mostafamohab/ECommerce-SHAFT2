@@ -66,9 +66,6 @@ public class TestClassJson {
 		driver = new SHAFT.GUI.WebDriver();
 		new HomePage(driver)
                 .navigate();
-
-		// Setting Chrome Window Size to be maximized
-		driver.browser().maximizeWindow();
 	}
 
 	@Story("ECommerce Basic Validations")
