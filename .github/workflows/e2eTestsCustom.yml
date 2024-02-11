@@ -18,7 +18,6 @@ on:
 jobs:
   Custom_Linux_Grid:
     runs-on: [ self-hosted, wfc ]
-    timeout-minutes: 600
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4

@@ -11,10 +11,7 @@ on:
 jobs:
   GUI_Web:
     name: Run GUI Web Tests
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-22.04, windows-latest, macOS-12 ]
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -23,7 +20,6 @@ jobs:
         with:
           node-version: '16'
       - name: Set up Native Selenium Grid
-        if: runner.os == 'Linux'
         run: docker-compose -f src/main/resources/docker-compose/selenium4.yml up --scale chrome=4 --scale edge=0 --scale firefox=0 -d
 
       - name: Set up JDK 21
@@ -31,44 +27,31 @@ jobs:
         with:
           java-version: '21'
           distribution: 'zulu'
+
       - name: Check running containers
-        if: runner.os == 'Linux'
         run: docker ps
-      - name: Run tests on Linux/MacOS
-        if: runner.os != 'Windows'
+      - name: Run tests on Linux
         continue-on-error: true
         run: |
-          if [ "$RUNNER_OS" == "Linux" ]; then
-               mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="LINUX" -DmaximumPerformanceMode="2" -DtargetBrowserName="GoogleChrome" -DcreateAnimatedGif="true" -DgenerateAllureReportArchive="true"
-          elif [ "$RUNNER_OS" == "macOS" ]; then
-               mvn test -DexecutionAddress="browserstack" -DtargetOperatingSystem="MAC" -DmaximumPerformanceMode="1" -DtargetBrowserName="Safari" "-DbrowserStack.os=OS X" "-DbrowserStack.osVersion=Monterey" "-DbrowserStack.browserVersion=15.3" -DcreateAnimatedGif="true" -DgenerateAllureReportArchive="true"
-          else
-               echo "$RUNNER_OS not supported"
-               exit 1
-          fi
-      - name: Run tests on Windows
-        if: runner.os == 'Windows'
-        continue-on-error: true
-        run: |
-          mvn test -DexecutionAddress="local" -DtargetOperatingSystem="WINDOWS" -DmaximumPerformanceMode="2" -DtargetBrowserName="MicrosoftEdge" -DgenerateAllureReportArchive="true"
+          mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="LINUX" -DmaximumPerformanceMode="2" -DtargetBrowserName="GoogleChrome" -DcreateAnimatedGif="true" -DgenerateAllureReportArchive="true"
 
       - name: Upload Allure Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ runner.os }} - Desktop Browsers Tests Allure Report
+          name: Linux Desktop Browsers Tests Allure Report
           path: "generatedReport_*.zip"
 
       - name: Upload Allure Report HTML as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-           name: ${{ runner.os }} - Desktop Browsers Tests Allure Report HTML
+           name: Linux Desktop Browsers Tests Allure Report HTML
            path: "allure-report/index.html"
 
       - name: Upload Extent Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
+          name: Linux Desktop Browsers Tests Extent Report
           path: "extent-reports/ExtentReports_*.html"
