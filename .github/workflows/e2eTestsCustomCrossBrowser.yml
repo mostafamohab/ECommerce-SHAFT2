@@ -53,13 +53,6 @@ jobs:
           name: Firefox_Custom_Linux_Grid_Allure_HTML
           path: "allure-report/index.html"
 
-      - name: Upload Extent Report as Pipeline Artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Firefox_Custom_Linux_Grid_Extent
-          files: "extent-reports/ExtentReports_*.html"
-
   Chrome_Custom_Linux_Grid:
     runs-on: ubuntu-22.04
     steps:
@@ -105,13 +98,6 @@ jobs:
           name: Chrome_Custom_Linux_Grid_Allure_HTML
           path: "allure-report/index.html"
 
-      - name: Upload Extent Report as Pipeline Artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Chrome_Custom_Linux_Grid_Extent
-          files: "extent-reports/ExtentReports_*.html"
-
   Edge_Custom_Linux_Grid:
     runs-on: ubuntu-22.04
     steps:
@@ -156,10 +142,3 @@ jobs:
         with:
           name: Edge_Custom_Linux_Grid_Allure_HTML
           path: "allure-report/index.html"
-
-      - name: Upload Extent Report as Pipeline Artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Edge_Custom_Linux_Grid_Extent
-          files: "extent-reports/ExtentReports_*.html"
