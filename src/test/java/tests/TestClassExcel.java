@@ -5,7 +5,7 @@ package tests;
 import java.io.IOException;
 import java.util.ArrayList;
 import com.shaft.driver.SHAFT;
-import com.shaft.tools.io.JSONFileManager;
+import com.shaft.tools.io.ExcelFileManager;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
@@ -21,14 +21,14 @@ import pages.*;
 public class TestClassExcel {
 
 	private SHAFT.GUI.WebDriver driver;
-	private JSONFileManager testData;
+	private ExcelFileManager testData;
 	private String className= this.getClass().getName().replace(this.getClass().getPackageName()+".","");
 	private DataDriven d = new DataDriven();
 	private String Email = RandomEmailGeneratorpage.getComplexRandomEmail();
 
 	@BeforeClass(alwaysRun = true,description = "Setup Test Data.")
 	public void beforeClass(){
-		testData = new JSONFileManager( className + ".xlsx");
+		testData = new ExcelFileManager( className + ".xlsx");
 	}
 
 	@BeforeMethod(alwaysRun = true,description = "Setup Browser instance.")
@@ -45,7 +45,8 @@ public class TestClassExcel {
 	@Test(priority = 1,description = "Sign Up")
 	public void signUp() throws IOException {
 		// create an object from dataDriven class
-		ArrayList<String> data = d.getData("Signup6");
+		ArrayList<String> data;
+		data = d.getData("Signup6");
 
 		new HomePage(driver)
             .navigate()
@@ -66,7 +67,8 @@ public class TestClassExcel {
             .clickCreateAccount();
 
 		// create a new arraylist of strings in order to extract test data from excel
-		ArrayList<String> data = d.getData("Register6");
+		ArrayList<String> data;
+		data = d.getData("Register6");
 
 		new CreateAccountpage(driver)
 			.chooseMale()
@@ -88,7 +90,8 @@ public class TestClassExcel {
 	@Test(priority = 3,description = "Sign In")
 	public void signIn() throws IOException {
 		// create a new arraylist of strings in order to extract test data from excel
-		ArrayList<String> data = d.getData("Login6");
+		ArrayList<String> data;
+		data = d.getData("Login6");
 
 		new HomePage(driver)
             .navigate()
@@ -104,9 +107,10 @@ public class TestClassExcel {
 	@Test(priority = 4,description = "Add to Cart")
 	public void addToCart() throws IOException {
         // create a new arraylist of strings in order to extract test data from excel
-        ArrayList<String> data = d.getData("Login6");
+        ArrayList<String> data;
+		data = d.getData("Login6");
 
-        new HomePage(driver)
+		new HomePage(driver)
             .navigate()
             .clickSignUp()
             .enterEmailSignin(Email)
@@ -133,9 +137,10 @@ public class TestClassExcel {
 	@Test(priority = 5,description = "Cart Check Out")
 	public void cartCheckout() throws IOException {
         // create a new arraylist of strings in order to extract test data from excel
-        ArrayList<String> data = d.getData("Login6");
+        ArrayList<String> data;
+		data = d.getData("Login6");
 
-        new HomePage(driver)
+		new HomePage(driver)
                 .navigate()
                 .clickSignUp()
                 .enterEmailSignin(Email)
@@ -165,9 +170,10 @@ public class TestClassExcel {
     @Test(priority = 6,description = "Cart Check Out")
     public void createAddress() throws IOException {
         // create a new arraylist of strings in order to extract test data from ex
-        ArrayList<String> data = d.getData("Login6");
+        ArrayList<String> data;
+		data = d.getData("Login6");
 
-        new HomePage(driver)
+		new HomePage(driver)
                 .navigate()
                 .clickSignUp()
                 .enterEmailSignin(Email)
@@ -218,9 +224,10 @@ public class TestClassExcel {
     @Test(priority = 7,description = "Cart Check Out with valid address")
     public void cartCheckout2() throws IOException {
         // create a new arraylist of strings in order to extract test data from ex
-        ArrayList<String> data = d.getData("Login6");
+        ArrayList<String> data;
+		data = d.getData("Login6");
 
-        new HomePage(driver)
+		new HomePage(driver)
                 .navigate()
                 .clickSignUp()
                 .enterEmailSignin(Email)
@@ -255,9 +262,10 @@ public class TestClassExcel {
 	@Test(priority = 8,description = "Check Order Details")
 	public void checkOrderDetails() throws IOException {
     // create a new arraylist of strings in order to extract test data from excel
-    ArrayList<String> data = d.getData("Login6");
+    	ArrayList<String> data;
+		data = d.getData("Login6");
 
-        new HomePage(driver)
+		new HomePage(driver)
            .navigate()
            .clickSignUp()
            .enterEmailSignin(Email)
