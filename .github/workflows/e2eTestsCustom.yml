@@ -11,9 +11,6 @@ on:
           - firefox
           - chrome
           - microsoftedge
-      testsPath:
-        description: 'Path to Tests to be Executed'
-        default: ''
 
 jobs:
   Custom_Linux_Grid:
@@ -21,9 +18,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Log Tests Path
-        run: echo ${{ github.event.inputs.testsPath }}
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
 
       - name: Set up Native Selenium Grid
         run: |
@@ -52,28 +50,19 @@ jobs:
             echo "Browser not supported"
           fi
 
-      - name: Check running containers
-        run: docker ps
-
-      - name: Install Java JDK 21
+      - name: Set Up Java JDK 21
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'zulu'
-          cache: 'maven'
-          check-latest: true
 
-      - name: Install Maven
-        run: |
-          sudo apt update
-          sudo apt-get install -y maven
-      - name: Check maven version
-        run: mvn -version
+      - name: Check running containers
+        run: docker ps
 
       - name: Run tests
         continue-on-error: true
         run: |
-          mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="LINUX" -DtargetBrowserName="${{ github.event.inputs.targetBrowser }}" -DheadlessExecution="true" -DgenerateAllureReportArchive="true" -DscreenshotParams_whenToTakeAScreenshot="FailuresOnly" -DcreateAnimatedGif="false" -Dtest="${{ github.event.inputs.testsPath }}"
+          mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="LINUX" -DtargetBrowserName="${{ github.event.inputs.targetBrowser }}" -DheadlessExecution="true" -DscreenshotParams_whenToTakeAScreenshot="FailuresOnly" -DcreateAnimatedGif="true" -DgenerateAllureReportArchive="true"
 
       - name: Upload Allure Report as Pipeline Artifact
         if: always()
