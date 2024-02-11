@@ -24,7 +24,7 @@ public class TestClassExcel {
 	private JSONFileManager testData;
 	private String className= this.getClass().getName().replace(this.getClass().getPackageName()+".","");
 	private dataDriven d = new dataDriven();
-
+	private String Email = RandomEmailGeneratorpage.getComplexRandomEmail();
 
 	@BeforeClass(alwaysRun = true,description = "Setup Test Data.")
 	public void beforeClass(){
@@ -34,9 +34,6 @@ public class TestClassExcel {
 	@BeforeMethod(alwaysRun = true,description = "Setup Browser instance.")
 	public void setUp() throws IOException {
 		driver = new SHAFT.GUI.WebDriver();
-
-		// create an object from dataDriven class
-		ArrayList<String> data = d.getData("Signup6");
 
 		new HomePage(driver)
                 .navigate();
@@ -57,7 +54,7 @@ public class TestClassExcel {
 		new HomePage(driver)
             .navigate()
 			.clickSignUp()
-			.emailSignup(data.get(1))
+			.emailSignup(Email)
 			.clickCreateAccount();
 	}
 
@@ -73,7 +70,7 @@ public class TestClassExcel {
         new HomePage(driver)
             .navigate()
             .clickSignUp()
-            .emailSignup(data.get(1))
+            .emailSignup(Email)
             .clickCreateAccount();
 
 		// create a new arraylist of strings in order to extract test data from excel
@@ -107,7 +104,7 @@ public class TestClassExcel {
 		new HomePage(driver)
             .navigate()
             .clickSignUp()
-			.enterEmailSignin(data.get(1))
+			.enterEmailSignin(Email)
 			.enterPasswordSignin(data.get(2))
 			.clickSignIn();
 	}
@@ -126,7 +123,7 @@ public class TestClassExcel {
         new HomePage(driver)
             .navigate()
             .clickSignUp()
-            .enterEmailSignin(data.get(1))
+            .enterEmailSignin(Email)
             .enterPasswordSignin(data.get(2))
             .clickSignIn();
 
@@ -158,7 +155,7 @@ public class TestClassExcel {
         new HomePage(driver)
                 .navigate()
                 .clickSignUp()
-                .enterEmailSignin(data.get(1))
+                .enterEmailSignin(Email)
                 .enterPasswordSignin(data.get(2))
                 .clickSignIn();
 
@@ -193,7 +190,7 @@ public class TestClassExcel {
         new HomePage(driver)
                 .navigate()
                 .clickSignUp()
-                .enterEmailSignin(data.get(1))
+                .enterEmailSignin(Email)
                 .enterPasswordSignin(data.get(2))
                 .clickSignIn();
 
@@ -249,7 +246,7 @@ public class TestClassExcel {
         new HomePage(driver)
                 .navigate()
                 .clickSignUp()
-                .enterEmailSignin(data.get(1))
+                .enterEmailSignin(Email)
                 .enterPasswordSignin(data.get(2))
                 .clickSignIn();
 
@@ -289,7 +286,7 @@ public class TestClassExcel {
         new HomePage(driver)
            .navigate()
            .clickSignUp()
-           .enterEmailSignin(data.get(1))
+           .enterEmailSignin(Email)
            .enterPasswordSignin(data.get(2))
            .clickSignIn();
 

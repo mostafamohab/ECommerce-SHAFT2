@@ -24,7 +24,7 @@ public class TestClassJson {
 	private JSONFileManager testData;
 	private String className= this.getClass().getName().replace(this.getClass().getPackageName()+".","");
 
-	private String Email;
+	private String Email = RandomEmailGeneratorpage.getComplexRandomEmail();
 	private String Password;
 	private String FirstName;
 	private String LastName;
@@ -47,7 +47,7 @@ public class TestClassJson {
 
 	@BeforeMethod(alwaysRun = true,description = "Setup Browser instance.")
 	public void setUp(Method method) {
-		Email = testData.getTestData(method.getName() + ".Email");
+		//Email = testData.getTestData(method.getName() + ".Email");
 		Password = testData.getTestData(method.getName() + ".Password");
 		FirstName = testData.getTestData(method.getName() + ".FirstName");
 		LastName = testData.getTestData(method.getName() + ".LastName");
