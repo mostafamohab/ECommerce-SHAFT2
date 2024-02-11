@@ -1,6 +1,9 @@
 name: E2E Tests Custom
 
 on:
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       targetBrowser:
@@ -14,7 +17,7 @@ on:
 
 jobs:
   Custom_Linux_Grid:
-    runs-on: [ self-hosted, wfc ]
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -79,8 +82,15 @@ jobs:
           path: "allure-report/index.html"
 
       - name: Upload Extent Report as Pipeline Artifact
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: Custom_Linux_Grid_Extent
           files: "extent-reports/ExtentReports_*.html"
+
+      - name: Upload Extent Report HTML as Pipeline Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Custom_Linux_Grid_Extent_HTML
+          files: "extent-reports/index.html"
