@@ -12,8 +12,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-//dataDriven Class initialization as public class
-public class dataDriven {
+	//DataDriven Class initialization as public class
+public class DataDriven {
 
 	// Methods
 	public ArrayList<String> getData(String testcaseName) throws IOException {
@@ -26,7 +26,7 @@ public class dataDriven {
 		ArrayList<String> array = new ArrayList<String>();
 
 		// file input stream
-		FileInputStream fis = new FileInputStream("src\\test\\resources\\testDataFiles\\TestClassExcel.xlsx");
+		FileInputStream fis = new FileInputStream("..//testDataFiles//TestClassExcel.xlsx");
 
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
