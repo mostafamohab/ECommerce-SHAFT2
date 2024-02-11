@@ -27,7 +27,7 @@ public class Blousespage {
 	// Store Xpath for Add to Cart Button
 	private By Addtocart = By.xpath("(//span[contains(text(),'Add to cart')][1])");
 	// Store Xpath for Proceed to Check Out First Button
-	private By Checkout1 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])");
+	private By Checkout1 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])[1]");
 	// Store Xpath for Proceed to Check Out Second Button (Summary)
 	private By Checkout2 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])[2]");
 	// Store Xpath for Proceed to Check Out Third Button (Address)
