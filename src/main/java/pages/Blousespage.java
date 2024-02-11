@@ -27,11 +27,11 @@ public class Blousespage {
 	// Store Xpath for Add to Cart Button
 	private By Addtocart = By.xpath("(//span[contains(text(),'Add to cart')][1])");
 	// Store Xpath for Proceed to Check Out First Button
-	private By Checkout1 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])[1]");
+	private By Checkout1 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])");
 	// Store Xpath for Proceed to Check Out Second Button (Summary)
-	private By Checkout2 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])[2]");
+	private By Checkout2 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1][1])[2]");
 	// Store Xpath for Proceed to Check Out Third Button (Address)
-	private By Checkout3 = By.xpath("//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]");
+	private By Checkout3 = By.xpath("(//span[contains(text(),'Proceed to checkout')][1])[2]");
 	// Store Xpath for agree to the terms and conditions Checkbox
 	private By Checkbox = By.xpath("//input[@id='cgv']");
 	// Store Xpath for Check Out Fourth Button (Shipping)
