@@ -22,18 +22,22 @@ Tools and Technologies:
 
 9- JSON File Manager class
 
-10- SHAFT.GUI.WebDriver driver class
+10- Excel File Manager class
 
-11- YML Files
+11- SHAFT.GUI.WebDriver driver class
 
-12- Apache POI
+12- YML Files
 
-13- JSON files
+13- Apache POI
 
-14- Rest Assured APIs
+14- JSON files
 
-15- Github Actions
+15- Rest Assured APIs
 
-16- Extent Reports
+16- Github Actions
 
-17- Allure Reports
+17- Extent Reports
+
+18- Allure Reports
+
+19- Selenium Grid
